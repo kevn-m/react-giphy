@@ -1,8 +1,13 @@
 import React, { Component } from "react"
+import Gif from "./Gif"
 
 class SelectedGif extends Component {
   render() {
-    return <div className="selected-gif"></div>
+    return (
+      <div className="selected-gif">
+        <Gif />
+      </div>
+    )
   }
 }
 
