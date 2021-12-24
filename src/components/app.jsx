@@ -21,6 +21,7 @@ class App extends Component {
       {
         q: query,
         rating: "g",
+        limit: 10,
       },
       (error, result) => {
         this.setState({
