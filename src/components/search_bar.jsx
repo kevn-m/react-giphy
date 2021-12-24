@@ -2,11 +2,7 @@ import React, { Component } from "react"
 
 class searchBar extends Component {
   render() {
-    return (
-      <div className="form-search">
-        <input type="text" />
-      </div>
-    )
+    return <input type="text" className="form-control form-search" />
   }
 }
 
