@@ -1,22 +1,32 @@
-import React from "react"
+import React, { Component } from "react"
 
 import SearchBar from "./search_bar"
-import SelectedGif from "./selected_gif"
+import Gif from "./gif"
 import GifList from "./gif_list"
 
-const App = () => {
-  const gifs = [{ id: "bUm7IqjufH5eoFN6bG" }, { id: "lMsT2f47tDxFMYdJMC" }]
-  return (
-    <div>
-      <div className="left-scene">
-        <SearchBar />
-        <SelectedGif />
-      </div>
-      <div className="right-scene">
-        <GifList gifs={gifs} />
-      </div>
-    </div>
-  )
-}
+class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      gifs: [],
+      selectedGifId: "xT9IgK70y3VHfkksve",
+    }
+  }
 
+  render() {
+    return (
+      <div>
+        <div className="left-scene">
+          <SearchBar />
+          <div className="selected-gif">
+            <Gif id={this.state.selectedGifId} />
+          </div>
+        </div>
+        <div className="right-scene">
+          <GifList gifs={this.state.gifs} />
+        </div>
+      </div>
+    )
+  }
+}
 export default App
