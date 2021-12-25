@@ -10,7 +10,7 @@ class App extends Component {
     super(props)
     this.state = {
       gifs: [],
-      selectedGifId: "xT9IgK70y3VHfkksve",
+      selectedGifId: "BBkKEBJkmFbTG",
     }
     this.search("homer thinking")
   }
