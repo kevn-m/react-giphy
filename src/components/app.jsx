@@ -15,6 +15,12 @@ class App extends Component {
     this.search("homer thinking")
   }
 
+  selectGif = (id) => {
+    this.setState({
+      selectedGifId: id,
+    })
+  }
+
   search = (query) => {
     const apiKey = "iklpRhVg1ZRatjgUkMxG2CcjgFCK9zyf"
     giphy(apiKey).search(
@@ -41,7 +47,7 @@ class App extends Component {
           </div>
         </div>
         <div className="right-scene">
-          <GifList gifs={this.state.gifs} />
+          <GifList gifs={this.state.gifs} selectGif={this.selectGif} />
         </div>
       </div>
     )
